@@ -12,7 +12,7 @@ namespace csharp_test
             uint iSecurityLevel = 1;
             string ipVariant = string.Empty;
             string ipOptions = "01234567890123456";
-            byte[] iopKeyArray = new byte[16];
+            byte[] iopKeyArray = new byte[32];
             byte[] ipSeedArray = new byte[16];
 
             seedkeywrapper skw = new seedkeywrapper();
@@ -22,7 +22,7 @@ namespace csharp_test
             Console.WriteLine($"{retVal}");
             foreach (int element in iopKeyArray)
             {
-                Console.Write($"{element} ");
+                Console.Write($"{element:X2} ");
             }
             Console.WriteLine();
             Console.WriteLine($"{oActualKeyArraySize}");

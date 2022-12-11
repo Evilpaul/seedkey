@@ -31,6 +31,19 @@ namespace skwrapper
 		~seedkeywrapper(void);
 #pragma endregion
 
+		/// <summary>Function to generate key value from an input seed value</summary>
+		/// <returns><typeparam name="VKeyGenResultExOpt">The type returned from this method</typeparam>
+		/// <typeparamref name="KGREO_Ok"/> when calculation completes successfully.
+		/// <typeparamref name="KGREO_BufferToSmall"/> when <param name="ipSeedArray"/> or <param name="iopKeyArray"/> do not meet size requirements.
+		/// <typeparamref name="KGREO_SecurityLevelInvalid"/> when <param name="iSecurityLevel"/> does not match a known security level.
+		/// <typeparamref name="KGREO_VariantInvalid"/> when <param name="ipVariant"/> does not match a known variant.
+		/// <typeparamref name="KGREO_UnspecifiedError"/>when other errors occur (e.g. parameter value is null pointer).</returns>
+		/// <param name="ipSeedArray">The input seed value.</param>
+		/// <param name="iSecurityLevel">The security level. This value will always be an odd number to conform to ISO14229-1 requirements.</param>
+		/// <param name="ipVariant">String containing the name of the ECU variant.</param>
+		/// <param name="ipOptions">String containing options to be applied to the calculation.</param>
+		/// <param name="iopKeyArray">The output key value.</param>
+		/// <param name="oActualKeyArraySize">The actual size of the calculated key value.</param>
 		VKeyGenResultExOpt GenerateKeyExOpt(
 			[In] array<Byte>^ ipSeedArray,
 			[In] const unsigned int iSecurityLevel,

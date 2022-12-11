@@ -41,12 +41,4 @@ KEYGENALGO_API VKeyGenResultExOpt GenerateKeyExOpt(
 	unsigned char* iopKeyArray, unsigned int iMaxKeyArraySize,
 	unsigned int& oActualKeyArraySize);
 
-KEYGENALGO_API VKeyGenResultExOpt returnOnly();
-KEYGENALGO_API void seedOnly(const unsigned char* ipSeedArray, unsigned int iSeedArraySize);
-KEYGENALGO_API void securityLevelOnly(const unsigned int iSecurityLevel);
-KEYGENALGO_API void variantOnly(const char* ipVariant);
-KEYGENALGO_API void optionsOnly(const char* ipOptions);
-KEYGENALGO_API void keyOnly(unsigned char* iopKeyArray, unsigned int iMaxKeyArraySize);
-KEYGENALGO_API void actualKeySizeOnly(unsigned int& oActualKeyArraySize);
-
 #endif // KEY_GEN_ALGO_INTERFACE_H

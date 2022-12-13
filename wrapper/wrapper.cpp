@@ -1,9 +1,9 @@
 #include "pch.h"
-#include "seedkey_wrapper.h"
+#include "wrapper.h"
 
 extern "C"
 {
-#include "..\KeyGenDll_GenerateKeyExOpt\GenerateKeyExOpt.h"
+#include "..\seedkey\GenerateKeyExOpt.h"
 }
 
 #pragma region conversion functions

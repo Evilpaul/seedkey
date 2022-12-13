@@ -1,7 +1,7 @@
 ﻿using skwrapper;
 using System;
 
-namespace csharp_test
+namespace test
 {
     internal class Program
     {

@@ -8,7 +8,10 @@
 #define PCH_H
 
 // add headers that you want to pre-compile here
-//#include "..\KeyGenDll_GenerateKeyExOpt\GenerateKeyExOpt.h"
+extern "C"
+{
+#include "..\seedkey\GenerateKeyExOpt.h"
+}
 
 #include <msclr/marshal_cppstd.h>
 

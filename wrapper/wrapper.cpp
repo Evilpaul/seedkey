@@ -1,11 +1,6 @@
 #include "pch.h"
 #include "wrapper.h"
 
-extern "C"
-{
-#include "..\seedkey\GenerateKeyExOpt.h"
-}
-
 #pragma region conversion functions
 inline const char* skwrapper::seedkeywrapper::convertStringToChar(String^ str)
 {

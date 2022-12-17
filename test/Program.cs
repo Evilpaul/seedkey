@@ -13,19 +13,31 @@ namespace test
             string ipVariant = string.Empty;
             string ipOptions = "01234567890123456";
             byte[] iopKeyArray = new byte[32];
-            byte[] ipSeedArray = new byte[16];
+            byte[] ipSeedArray = new byte[16] { 0x00, 0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07, 0x08, 0x09, 0x0A, 0x0B, 0x0C, 0x0D, 0x0E, 0x0F };
 
             seedkeywrapper skw = new seedkeywrapper();
 
             Console.WriteLine($"Calling {nameof(skw.GenerateKeyExOpt)}");
-            retVal = skw.GenerateKeyExOpt(ipSeedArray, iSecurityLevel, ipVariant, ipOptions, out iopKeyArray, out oActualKeyArraySize);
-            Console.WriteLine($"{retVal}");
-            foreach (int element in iopKeyArray)
+            Console.Write("Seed   : ");
+            foreach (byte element in ipSeedArray)
             {
                 Console.Write($"{element:X2} ");
             }
             Console.WriteLine();
-            Console.WriteLine($"{oActualKeyArraySize}");
+
+            retVal = skw.GenerateKeyExOpt(ipSeedArray, iSecurityLevel, ipVariant, ipOptions, out iopKeyArray, out oActualKeyArraySize);
+
+            Console.WriteLine($"Result : {retVal}");
+            // only output other parameter details if the result was OK
+            if (retVal == VKeyGenResultExOpt.KGREO_Ok)
+            {
+                Console.Write("Key    : ");
+                for (int i = 0; i < oActualKeyArraySize; i++)
+                {
+                    Console.Write($"{iopKeyArray[i]:X2} ");
+                }
+                Console.WriteLine();
+            }
         }
     }
 }

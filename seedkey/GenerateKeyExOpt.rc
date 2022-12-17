@@ -38,7 +38,7 @@ BEGIN
             VALUE "InternalName",     "GenerateKeyExOpt"
             VALUE "LegalCopyright",   "© Copyright 2011 Vector Informatik GmbH\0"
             VALUE "LegalTrademarks",  "\0"
-            VALUE "OriginalFilename", "seedkey_ProjName.dll"
+            VALUE "OriginalFilename", QUOTE(FILENAME)
             VALUE "PrivateBuild",     "\0"
             VALUE "ProductName",      "CANoe/CANalyzer"
             VALUE "ProductVersion",   "8.0"

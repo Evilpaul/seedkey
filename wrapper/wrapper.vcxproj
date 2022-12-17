@@ -67,7 +67,7 @@
       <DebugInformationFormat>None</DebugInformationFormat>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>FILENAME=$(TargetFileName);%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>FILENAME=$(TargetFileName);TARGET=$(TargetName);FRAMEWORK=$(TargetFramework);%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ResourceCompile>
     <Link>
       <GenerateDebugInformation>false</GenerateDebugInformation>

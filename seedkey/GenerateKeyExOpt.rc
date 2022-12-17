@@ -29,13 +29,13 @@
 BEGIN
     BLOCK "StringFileInfo"
     BEGIN
-        BLOCK "040904e4"
+        BLOCK "080904e4"
         BEGIN
             VALUE "Comments",         "This DLL must be adapted to concrete system requirements"
             VALUE "CompanyName",      "Vector Informatik GmbH\0"
             VALUE "FileDescription",  "Example for a 'Seed & Key' DLL using extended algorithm with option"
             VALUE "FileVersion",      QUOTE(MAJOR) "." QUOTE(MINOR) "." QUOTE(BUILD)
-            VALUE "InternalName",     "GenerateKeyExOpt"
+            VALUE "InternalName",     QUOTE(TARGET)
             VALUE "LegalCopyright",   "© Copyright 2011 Vector Informatik GmbH\0"
             VALUE "LegalTrademarks",  "\0"
             VALUE "OriginalFilename", QUOTE(FILENAME)

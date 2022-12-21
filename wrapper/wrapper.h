@@ -21,8 +21,8 @@ namespace skwrapper
 
 #pragma region conversion functions
 		inline const char* convertStringToChar(String^ str);
-		inline void convertByteToChar(array<Byte>^ source, unsigned char* dest);
-		inline array<Byte>^ convertNativeCharToByteArray(unsigned char* chars, int count);
+		inline void convertByteToChar(array<unsigned char>^ source, unsigned char* dest);
+		inline array<unsigned char>^ convertNativeCharToByteArray(unsigned char* chars, int count);
 #pragma endregion
 
 	public:
@@ -45,11 +45,11 @@ namespace skwrapper
 		/// <param name="iopKeyArray">The output key value.</param>
 		/// <param name="oActualKeyArraySize">The actual size of the calculated key value.</param>
 		VKeyGenResultExOpt GenerateKeyExOpt(
-			[In] array<Byte>^ ipSeedArray,
+			[In] array<unsigned char>^ ipSeedArray,
 			[In] const unsigned int iSecurityLevel,
 			[In] String^ ipVariant,
 			[In] String^ ipOptions,
-			[Out] array<Byte>^% iopKeyArray,
+			[Out] array<unsigned char>^% iopKeyArray,
 			[Out] unsigned int% oActualKeyArraySize);
 	};
 }

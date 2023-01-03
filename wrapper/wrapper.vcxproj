@@ -68,6 +68,7 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>FILENAME=$(TargetFileName);TARGET=$(TargetName);FRAMEWORK=$(TargetFramework);%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0809</Culture>
     </ResourceCompile>
     <Link>
       <GenerateDebugInformation>false</GenerateDebugInformation>
@@ -83,6 +84,7 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>FILENAME=$(TargetFileName);%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0809</Culture>
     </ResourceCompile>
   </ItemDefinitionGroup>
   <ItemGroup>

@@ -73,6 +73,7 @@
     </Link>
     <ResourceCompile>
       <PreprocessorDefinitions>FILENAME=$(TargetFileName);%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0809</Culture>
     </ResourceCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -92,6 +93,7 @@
     </Link>
     <ResourceCompile>
       <PreprocessorDefinitions>FILENAME=$(TargetFileName);TARGET=$(TargetName);%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0809</Culture>
     </ResourceCompile>
   </ItemDefinitionGroup>
   <ItemGroup>

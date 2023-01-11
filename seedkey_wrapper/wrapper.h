@@ -14,7 +14,7 @@ namespace skwrapper
 		KGREO_UnspecifiedError = 4
 	};
 
-	public ref class seedkeywrapper
+	public ref class seedkey_wrapper
 	{
 	private:
 		msclr::interop::marshal_context^ context;
@@ -27,8 +27,8 @@ namespace skwrapper
 
 	public:
 #pragma region Constructor and Deconstructor
-		seedkeywrapper(void);
-		~seedkeywrapper(void);
+		seedkey_wrapper(void);
+		~seedkey_wrapper(void);
 #pragma endregion
 
 		/// <summary>Function to generate key value from an input seed value</summary>

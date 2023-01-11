@@ -47,13 +47,13 @@
     <OutDir>$(ProjectDir)$(Configuration)\</OutDir>
     <IntDir>$(BaseIntermediateOutputPath)$(Configuration)\</IntDir>
     <LinkIncremental>true</LinkIncremental>
-    <TargetName>$(ProjectName)_$(SolutionName)</TargetName>
+    <TargetName>$(ProjectName).$(SolutionName)</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <OutDir>$(ProjectDir)$(Configuration)\</OutDir>
     <IntDir>$(BaseIntermediateOutputPath)$(Configuration)\</IntDir>
     <LinkIncremental>false</LinkIncremental>
-    <TargetName>$(ProjectName)_$(SolutionName)</TargetName>
+    <TargetName>$(ProjectName).$(SolutionName)</TargetName>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>

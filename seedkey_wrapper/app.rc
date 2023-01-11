@@ -9,6 +9,8 @@
 #define MINOR 0
 #define BUILD 0
 
+#define COMPANY "MyCompany Limited"
+
 /////////////////////////////////////////////////////////////////////////////
 //
 // Version
@@ -36,7 +38,7 @@ BEGIN
             VALUE "FileDescription",  ".NET wrapper for 'Seed & Key' DLL using extended algorithm with option"
             VALUE "FileVersion",      QUOTE(MAJOR) "." QUOTE(MINOR) "." QUOTE(BUILD)
             VALUE "InternalName",     QUOTE(TARGET)
-            VALUE "LegalCopyright",   "© Copyright 2022 "
+            VALUE "LegalCopyright",   "© Copyright 2022 " COMPANY
             VALUE "LegalTrademarks",  "\0"
             VALUE "OriginalFilename", QUOTE(FILENAME)
             VALUE "PrivateBuild",     "\0"

@@ -2,19 +2,19 @@
 #include "wrapper.h"
 
 #pragma region conversion functions
-inline const char* skwrapper::seedkeywrapper::convertStringToChar(String^ str)
+inline const char* skwrapper::seedkey_wrapper::convertStringToChar(String^ str)
 {
 	return context->marshal_as<const char*>(str);
 }
 
-inline void skwrapper::seedkeywrapper::convertByteToChar(array<unsigned char>^ source, unsigned char* dest)
+inline void skwrapper::seedkey_wrapper::convertByteToChar(array<unsigned char>^ source, unsigned char* dest)
 {
 	Marshal::Copy(source, 0, IntPtr(const_cast<unsigned char*>(dest)), source->Length);
 
 	return;
 }
 
-inline array<unsigned char>^ skwrapper::seedkeywrapper::convertNativeCharToByteArray(unsigned char* chars, int count)
+inline array<unsigned char>^ skwrapper::seedkey_wrapper::convertNativeCharToByteArray(unsigned char* chars, int count)
 {
 	array<unsigned char>^ local_list = gcnew array<unsigned char>(count);
 
@@ -25,18 +25,18 @@ inline array<unsigned char>^ skwrapper::seedkeywrapper::convertNativeCharToByteA
 #pragma endregion
 
 #pragma region Constructor and Deconstructor
-skwrapper::seedkeywrapper::seedkeywrapper(void)
+skwrapper::seedkey_wrapper::seedkey_wrapper(void)
 {
 	context = gcnew msclr::interop::marshal_context();
 }
 
-skwrapper::seedkeywrapper::~seedkeywrapper(void)
+skwrapper::seedkey_wrapper::~seedkey_wrapper(void)
 {
 	context->~marshal_context();
 }
 #pragma endregion
 
-skwrapper::VKeyGenResultExOpt skwrapper::seedkeywrapper::GenerateKeyExOpt(array<unsigned char>^ ipSeedArray, const unsigned int iSecurityLevel, String^ ipVariant, String^ ipOptions, array<unsigned char>^% iopKeyArray, unsigned int% oActualKeyArraySize)
+skwrapper::VKeyGenResultExOpt skwrapper::seedkey_wrapper::GenerateKeyExOpt(array<unsigned char>^ ipSeedArray, const unsigned int iSecurityLevel, String^ ipVariant, String^ ipOptions, array<unsigned char>^% iopKeyArray, unsigned int% oActualKeyArraySize)
 {
 	VKeyGenResultExOpt retVal = VKeyGenResultExOpt::KGREO_Ok;
 	unsigned int iSeedArraySize = ipSeedArray->Length;

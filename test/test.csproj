@@ -65,9 +65,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\wrapper\wrapper.vcxproj">
+    <ProjectReference Include="..\seedkey_wrapper\seedkey_wrapper.vcxproj">
       <Project>{e38ff958-3d8c-4f20-9b25-2063e4f0dd12}</Project>
-      <Name>wrapper</Name>
+      <Name>seedkey_wrapper</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
@@ -83,7 +83,7 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="..\seedkey\$(Configuration)\seedkey_$(SolutionName).dll">
+    <Content Include="..\seedkey\$(Configuration)\seedkey.$(SolutionName).dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>

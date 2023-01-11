@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "test", "test\test.csproj", 
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "seedkey", "seedkey\seedkey.vcxproj", "{D859FBCD-014C-4754-9284-595E0FC24684}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "wrapper", "wrapper\wrapper.vcxproj", "{E38FF958-3D8C-4F20-9B25-2063E4F0DD12}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "seedkey_wrapper", "seedkey_wrapper\seedkey_wrapper.vcxproj", "{E38FF958-3D8C-4F20-9B25-2063E4F0DD12}"
 	ProjectSection(ProjectDependencies) = postProject
 		{D859FBCD-014C-4754-9284-595E0FC24684} = {D859FBCD-014C-4754-9284-595E0FC24684}
 	EndProjectSection

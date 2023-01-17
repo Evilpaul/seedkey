@@ -15,7 +15,7 @@
     <EnableManagedPackageReferenceSupport>true</EnableManagedPackageReferenceSupport>
     <ProjectGuid>{E38FF958-3D8C-4F20-9B25-2063E4F0DD12}</ProjectGuid>
     <Keyword>NetCoreCProj</Keyword>
-    <RootNamespace>wrapper</RootNamespace>
+    <RootNamespace>skwrapper</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
     <TargetFramework>net6.0</TargetFramework>
     <ProjectName>seedkey_wrapper</ProjectName>
